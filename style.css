@@ -463,6 +463,36 @@ img {
 }
 
 
+/* ========form-styling========== */
+.form-section{
+    margin:var(--mb-5);
+    justify-content: center;
+    padding: var(--mb-3);
+    background-color: var(--first-color);
+    border-radius: var(--mb-3);
+    position: relative;
+    font-size: var(--mb-5);
+    width:400px;
+    margin-left: 25rem;
+    display:none;
+}
+
+#submit{
+    font-size:var(--h2-font-size);
+    color: var(--first-color-alt);
+    border-radius: var(--mb-3);
+    box-shadow: #A6A6A6;
+    /* width: var(--mb-2);
+    height: var(--mb-3); */
+    padding: var(--mb-2);
+
+}
+.bx-window-close{
+    margin-left:100px;
+    color:#ff0000;
+    margin-top:25px;
+}
+
 /*========== MEDIA QUERIES ==========*/
 
 @media screen and (min-width: 576px) {

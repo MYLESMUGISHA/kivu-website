@@ -77,6 +77,24 @@ function scrollUpBtn() {
 
 window.addEventListener("scroll", scrollUpBtn);
 
+let buttonForm= document.querySelector(".button");
+const contactForm = document.querySelector(".form-section");
+
+function formInput(){
+  contactForm.style.display= "block";
+  console.log("here am ")
+
+}
+
+buttonForm.addEventListener("click", formInput)
+
+let closeIcon= document.querySelector(".bx-window-close")
+
+
+function closeForm(){
+  contactForm.style.display="none"
+}
+closeIcon.addEventListener("click", closeForm)
 /*==================== 6. DARK LIGHT THEME ====================*/
 
 /*==================== 7. SCROLL REVEAL ANIMATION ====================*/
