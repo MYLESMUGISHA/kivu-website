@@ -77,24 +77,49 @@ function scrollUpBtn() {
 
 window.addEventListener("scroll", scrollUpBtn);
 
-let buttonForm= document.querySelector(".button");
+let buttonForm = document.querySelector(".button");
 const contactForm = document.querySelector(".form-section");
 
-function formInput(){
-  contactForm.style.display= "block";
-  console.log("here am ")
-
+function formInput() {
+  contactForm.style.display = "block";
+  console.log("here am ");
 }
 
-buttonForm.addEventListener("click", formInput)
+buttonForm.addEventListener("click", formInput);
 
-let closeIcon= document.querySelector(".bx-window-close")
+let closeIcon = document.querySelector(".bx-window-close");
 
-
-function closeForm(){
-  contactForm.style.display="none"
+function closeForm() {
+  contactForm.style.display = "none";
 }
-closeIcon.addEventListener("click", closeForm)
+closeIcon.addEventListener("click", closeForm);
 /*==================== 6. DARK LIGHT THEME ====================*/
 
+let themeButton = document.getElementById("theme-button");
+let darkTheme = "dark-theme";
+let iconTheme = "bx-sun";
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+});
+
 /*==================== 7. SCROLL REVEAL ANIMATION ====================*/
+
+/*===== declare a var that holds your animations ======= */
+
+let ourPageAnim = ScrollReveal({
+  origin: "top",
+  distance: "30px",
+  duration: 2000,
+  reset: true,
+});
+
+/*===== you call a method to that var and then you select which elements that you need to animate ======= */
+
+ourPageAnim.reveal(
+  `.home__data, .home__img, .about__data, .about__img,
+  .services__content, .menu__content, .contact__data, .contact__button, .footer__content`,
+
+  { interval: 200 }
+);
